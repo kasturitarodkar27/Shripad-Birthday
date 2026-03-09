@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Shripad</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#f4c6ff,#d7b6ff);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* tablet frame */
+
+.container{
+width:800px;
+height:500px;
+background:#f7e6ff;
+border-radius:30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
+padding:30px;
+position:relative;
+overflow:hidden;
+}
+
+/* pages */
+
+.page{
+display:none;
+text-align:center;
+}
+
+.active{
+display:block;
+}
+
+h1{
+color:#8e44ad;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#777;
+margin-bottom:30px;
+}
+
+/* cake */
+
+.cake{
+font-size:120px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.cake:hover{
+transform:scale(1.1);
+}
+
+/* cards */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.card{
+width:150px;
+height:120px;
+background:#e8c6ff;
+border-radius:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#d7aaff;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* message */
+
+.message{
+width:80%;
+margin:auto;
+line-height:1.6;
+color:#444;
+}
+
+/* balloons */
+
+.balloon{
+font-size:35px;
+animation:float 3s infinite alternate;
+}
+
+@keyframes float{
+from{transform:translateY(0)}
+to{transform:translateY(-20px)}
+}
+
+/* back button */
+
+.back{
+position:absolute;
+top:20px;
+left:20px;
+cursor:pointer;
+font-size:20px;
+}
+
+.music-layout{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+margin-top:40px;
+}
+
+.balloons{
+font-size:60px;
+}
+
+.player{
+width:250px;
+height:150px;
+background:#a77ab8;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.player button{
+background:white;
+border:none;
+padding:10px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+width:160px;
+height:140px;
+background:#d7aaff;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:80px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:35px;
+margin-top:40px;
+}
+
+.card{
+width:170px;
+height:150px;
+background:#d7a6e6;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:90px;
+}
+
+.music-layout{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+margin-top:40px;
+}
+
+.balloon-side img{
+width:180px;
+}
+
+.music-side{
+background:#a77ab8;
+padding:20px;
+border-radius:15px;
+text-align:center;
+width:260px;
+}
+
+.music-logo{
+width:200px;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+audio{
+width:100%;
+}
+
+.balloon-side img{
+width:300px;
+height:300px;
+object-fit:contain;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2, 300px);
+gap:25px;
+justify-content:center;
+margin-top:30px;
+}
+
+.gallery img{
+width:300px;
+height:200px;
+object-fit:cover;
+border-radius:18px;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.gallery img{
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.message-container{
+text-align:center;
+margin-top:20px;
+}
+
+.message-container h1{
+color:#8e44ad;
+font-size:36px;
+margin-bottom:30px;
+}
+
+.letter{
+background:white;
+width:550px;
+margin:auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+font-size:18px;
+line-height:1.6;
+color:#ad449b;
+}
+
+.sign{
+color:#8e44ad;
+font-weight:bold;
+font-size:20px;
+}
+
+.back{
+position:absolute;
+top:20px;
+left:25px;
+font-size:24px;
+cursor:pointer;
+color:#6c2fa3;
+}
+
+.back:hover{
+transform:scale(1.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page active">
+
+<h1>🎈🎁Happy Birthday Shripad🎊🪩</h1>
+<p class="subtitle">Click the cake for your surprise</p>
+
+<div class="cake" onclick="show(2)">🎂</div>
+
+</div>
+
+<!-- PAGE 2 -->
+ <div id="page2" class="page">
+
+<div class="back" onclick="show(1)">⬅</div>
+
+<h1>💜 THESE ARE FOR YOU 💜</h1>
+<p>Click to open</p>
+
+<div class="cards">
+
+<div class="card" onclick="show(3)">
+<img src="music.png">
+</div>
+
+<div class="card" onclick="show(4)">
+<img src="camera.png">
+</div>
+
+<div class="card" onclick="show(5)">
+<img src="letter.png">
+</div>
+
+</div>
+
+</div>
+
+<!-- MUSIC PAGE -->
+ <div id="page3" class="page">
+
+<div class="back" onclick="show(2)">⬅</div>
+
+<div class="music-layout">
+
+<div class="balloon-side">
+<img src="balloons.png">
+</div>
+
+<div class="music-side">
+
+<img src="musiclogo.png" class="music-logo">
+
+<audio controls>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PHOTO PAGE -->
+
+<div id="page4" class="page">
+
+<div class="back" onclick="show(2)">⬅</div>
+
+<h1>📸You</h1>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+</div>
+
+</div>
+
+<!-- LETTER PAGE -->
+ <div id="page5" class="page">
+    <div class="back" onclick="show(2)">⬅</div>
+   
+   <!-- message page ONLY here -->
+   
+   
+   <div class="message-container">
+
+   <h1>💖🎂 Happy Birthday <b>Shripad</b>🎂💖</h1>
+   
+   <div class="letter">
+    <br><br>
+   <p>
+  
+   I’m so grateful to have a friend like you. You bring so much positivity 
+   and joy wherever you go. Life feels a little more fun and meaningful with
+   you around. Welcome to your 20s, the start of a new and exciting
+   chapter! I hope this year gives you amazing memories, big achievements, 
+   and endless reasons to smile.Always keep shining and being the wonderful 
+   person you are.
+   Have the best birthday ever! 🎉
+
+   <br><br>
+
+   <span class="sign">– Kasturi ❤️</span>
+
+   </p>
+
+   </div>
+
+   </div>
+
+</div>
+
+
+<script>
+
+function show(page){
+
+let pages=document.querySelectorAll(".page")
+
+pages.forEach(p=>p.classList.remove("active"))
+
+document.getElementById("page"+page).classList.add("active")
+
+}
+
+function play(){
+document.getElementById("audio").play()
+}
+
+function pause(){
+document.getElementById("audio").pause()
+}
+</script>
+
+</body>
+</html>
